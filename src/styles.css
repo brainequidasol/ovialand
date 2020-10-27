@@ -849,14 +849,12 @@ left: 50%;
 margin: -7px 0 0 -15px;
 width: 30px;
 height: 20px;
-background: url("assets/images/tooltip/tooltip1.svg") center center no-repeat;
 background-size: 100%;
 }
 }
 
 .tooltip-content3 {
 position: absolute;
-background: url("assets/images/tooltip/shape1.svg") center bottom no-repeat;
 background-size: 100% 100%;
 z-index: 9999;
 width: 200px;
@@ -9809,33 +9807,7 @@ transform: rotate(180deg);
 }
 
 body {
-&[themebg-pattern="pattern1"] {
-background-image: url("assets/images/pattern1.png");
-}
-&[themebg-pattern="pattern2"] {
-background-image: url("assets/images/pattern2.png");
-}
-&[themebg-pattern="pattern3"] {
-background-image: url("assets/images/pattern3.png");
-}
-&[themebg-pattern="pattern4"] {
-background-image: url("assets/images/pattern4.png");
-}
-&[themebg-pattern="pattern5"] {
-background-image: url("assets/images/pattern5.png");
-}
-&[themebg-pattern="pattern6"] {
-background-image: url("assets/images/pattern6.png");
-}
-&[themebg-pattern="pattern7"] {
-background-image: url("assets/images/pattern7.png");
-}
-&[themebg-pattern="pattern8"] {
-background-image: url("assets/images/pattern8.png");
-}
-&[themebg-pattern="pattern9"] {
-background-image: url("assets/images/pattern9.png");
-}
+
 }
 
 .pcoded {
@@ -14092,12 +14064,10 @@ text-align: center;
 }
 
 td.details-control {
-background: url("assets/images/details_open.png") no-repeat center center;
 cursor: pointer;
 }
 
 tr.shown td.details-control {
-background: url("assets/images/details_close.png") no-repeat center center;
 }
 
 #row-select .selected, #row-delete .selected {
@@ -17726,7 +17696,6 @@ Chatting css start
 ==========================  **/
 
 .chat-bg {
-background-image: url("assets/images/chat-bg.jpg");
 background-size: cover;
 background-blend-mode: overlay;
 background-color: rgba(255, 255, 255, 0.45);
