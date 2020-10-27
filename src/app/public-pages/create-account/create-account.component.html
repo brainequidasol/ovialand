@@ -17,7 +17,7 @@
 							<div class="input-group">
 								<input class="form-control" placeholder="Username" type='' formControlName='userName' />
 								<span class="md-line"></span>
-							</div>
+							</div>	
 							<div class="input-group">
 								<input class="form-control" placeholder="Password" type='' formControlName='userName' />
 								<span class="md-line"></span>
@@ -26,13 +26,19 @@
 								<input class="form-control" placeholder="Confirm Password" type='' formControlName='userName' />
 								<span class="md-line"></span>
 							</div>
-							<div class="input-group">
-								<input class="form-control" placeholder="First Name" type='' formControlName='userName' />
-								<span class="md-line"></span>
-							</div>
-							<div class="input-group">
-								<input class="form-control" placeholder="Middle Name" type='' formControlName='userName' />
-								<span class="md-line"></span>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="input-group">
+										<input class="form-control" placeholder="First Name" type='' formControlName='userName' />
+										<span class="md-line"></span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-group">
+										<input class="form-control" placeholder="Middle Name" type='' formControlName='userName' />
+										<span class="md-line"></span>
+									</div>
+								</div>
 							</div>
 							<div class="input-group">
 								<input class="form-control" placeholder="Last name" type='' formControlName='userName' />
@@ -47,34 +53,20 @@
 								<input class="form-control" placeholder="Password" type='password' formControlName='password' />
 								<span class="md-line"></span>
 							</div>
-							<div class="row m-t-25 text-left">
-								<div class="col-sm-12 col-xs-12 forgot-phone text-left">
-									<!-- <a [routerLink]="['/dashboard']" class="text-right f-w-600 text-inverse"> Forgot Your Password?</a> -->
-									<a class="text-right f-w-600 text-inverse"> Forgot Your Password?</a>
+							<button class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" type="submit" > Create Account</button>
+
+							<hr/>
+							<div class="row">
+								<div class="col-md-10">
+									<p class="text-inverse text-left m-b-0">&copy; 2020 Ovialand</p>
+								</div>
+								<div class="col-md-2">
 								</div>
 							</div>
-							<div class="row m-t-30">
-								<div class="col-md-12">
-<!--  <button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Sign in</button>
-	<a [routerLink]="['/dashboard']" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"> Sign In</a> -->
-	<button class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" type="submit" > Login</button>
-</div>
-<div class="col-md-12">
-	<button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Register</button>
-</div>
-</div>
-<hr/>
-<div class="row">
-	<div class="col-md-10">
-		<p class="text-inverse text-left m-b-0">&copy; 2020 Ovialand</p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="col-md-2">
-	</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
 </section>
