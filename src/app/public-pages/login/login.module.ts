@@ -1,4 +1,3 @@
-import { RouterModule } from '@angular/router';
 import { ResetPasswordComponent } from './../reset-password/reset-password.component';
 import { LoginComponent } from './login.component';
 import { CommonModule } from '@angular/common';

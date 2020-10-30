@@ -17,13 +17,6 @@ const routes: Routes = [
         component: LoginComponent
       },
       {
-<<<<<<< HEAD
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-=======
->>>>>>> 8752d2781be397da2ed2f0b1feb65ec44e7084bd
         path: 'create-account',
         component: CreateAccountComponent
       },

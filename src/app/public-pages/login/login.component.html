@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- CONTENT -->
 <div style="background-color: #177922;" class="layoutAuthentication">
   <div class="layoutAuthentication_content">
@@ -49,71 +48,3 @@
   <!-- END CONTENT -->
 </div>
 
-
-=======
-<section class="login p-fixed d-flex text-center common-img-bg">
-  <div class="auth-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="login-card card-body auth-body">
-          <form action="#" [formGroup]="loginFormGroup" class="md-float-material">
-            <div class="text-center">
-            </div>
-            <div class="auth-box">
-              <div class="row">
-                <div class="col-md-12">
-                  <img src="assets/images/logod.png" width="60%" alt="logo.png">
-                  <h3 class="text-left txt-primary">Sign In</h3>
-                </div>
-              </div>
-              <hr style="margin-top: 0 !important" />
-              <div class="input-group">
-                <!-- <input type="email" class="form-control" placeholder="Your Email Address"> -->
-                <input class="form-control" placeholder="Email Address" type='email' formControlName='userName' />
-                <label style="display: none;" for="" *ngIf="loginFormGroup.get('userName').hasError('required')">
-                  this field is required
-                </label>
-                <label for="" *ngIf="loginFormGroup.get('userName').hasError('email')">
-                  this field is must be email
-                </label>
-                <span class="md-line"></span>
-              </div>
-              <div class="input-group">
-                <!-- <input type="password" class="form-control" placeholder="Password"> -->
-                <input class="form-control" placeholder="Password" type='password' formControlName='password' />
-                <span class="md-line"></span>
-              </div>
-              <div class="row m-t-25 text-left">
-                <div class="col-sm-12 col-xs-12 forgot-phone text-left">
-                  <!-- <a [routerLink]="['/dashboard']" class="text-right f-w-600 text-inverse"> Forgot Your Password?</a> -->
-                  <a class="text-right f-w-600 text-inverse"> Forgot Your Password?</a>
-                </div>
-              </div>
-              <div class="row m-t-30">
-                <div class="col-md-12">
-                  <!--  <button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Sign in</button>
-          <a [routerLink]="['/dashboard']" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"> Sign In</a> -->
-                  <button class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" type="submit"
-                    (click)="submitForm()"> Login</button>
-                </div>
-                <div class="col-md-12">
-                  <button routerLink='create-account' type="button"
-                    class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Register</button>
-                </div>
-              </div>
-              <hr />
-              <div class="row">
-                <div class="col-md-10">
-                  <p class="text-inverse text-left m-b-0">&copy; 2020 Ovialand</p>
-                </div>
-                <div class="col-md-2">
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
->>>>>>> 8752d2781be397da2ed2f0b1feb65ec44e7084bd
