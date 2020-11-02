@@ -1,7 +1,9 @@
+import { HtmlAstPath } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Form, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -12,26 +14,49 @@ export class LoginComponent implements OnInit {
   loginFormGroup: FormGroup;
   sampleSubmit: Observable<any>;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.loginFormGroup = this.fb.group({
-      userName: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      userName: ['try@try', [Validators.required, Validators.email]],
+      password: ['try', [Validators.required]],
     });
   }
 
   submitForm() {
     if (this.loginFormGroup.valid) {
+
       console.log("loggin in")
+      let x = {
+        userName: this.loginFormGroup.get('userName').value,
+        password: this.loginFormGroup.get('password').value
+      };
       // dito papasa yung api
-      of(null).pipe(
-        delay(1000),
-        tap(() => console.log(`Success login for: ${this.loginFormGroup.get('userName').value}`))
-      ).subscribe();
+
+      // this.http.get('http://localhost:3000/api',).subscribe((response) => {
+      //   console.log(response);
+      // })
+
+      this.http.post('http://192.168.1.94:3000/api/posts', x).subscribe((response) => {
+        console.log(response);
+      })
+
+
+      console.error();
+
+
+
+
+
+      // of(null).pipe(
+      //   delay(1000),
+      //   tap(() => console.log(`Success login for: ${this.loginFormGroup.get('userName').value}`))
+      // ).subscribe();
 
     } else {
       console.log(this.loginFormGroup.errors);
+      console.log("error");
+
     }
   }
 
