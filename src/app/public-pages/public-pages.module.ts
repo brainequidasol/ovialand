@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -23,13 +24,17 @@ const routes: Routes = [
       {
         path: 'resetpassword',
         component: ResetPasswordComponent
+      },
+      {
+        path: 'publicdashboard',
+        component: DashboardComponent
       }
     ]
   }
 ];
 
 @NgModule({
-  declarations: [PublicPagesComponent, CreateAccountComponent, ResetPasswordComponent],
+  declarations: [PublicPagesComponent, CreateAccountComponent, ResetPasswordComponent, DashboardComponent],
   imports: [
     LoginModule,
     RouterModule.forChild(routes),

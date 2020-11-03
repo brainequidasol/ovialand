@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HtmlAstPath } from '@angular/compiler';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',

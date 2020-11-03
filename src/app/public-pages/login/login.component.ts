@@ -1,5 +1,6 @@
 import { HtmlAstPath } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+
 import { Form, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
@@ -26,27 +27,24 @@ export class LoginComponent implements OnInit {
   submitForm() {
     if (this.loginFormGroup.valid) {
 
-      console.log("loggin in")
+      // console.log("loggin in")
       let x = {
         userName: this.loginFormGroup.get('userName').value,
         password: this.loginFormGroup.get('password').value
       };
-      // dito papasa yung api
+      this.http.post('http://localhost:3000/api/posts', x).subscribe((response) => {
+        // console.log(response);
 
-      // this.http.get('http://localhost:3000/api',).subscribe((response) => {
-      //   console.log(response);
-      // })
-
-      this.http.post('http://192.168.1.94:3000/api/posts', x).subscribe((response) => {
-        console.log(response);
       })
+      // if (response.text("true")) {
+      //   console.log("valid")
+      // } else {
+      //   console.log("invalid");
+      // }
+
 
 
       console.error();
-
-
-
-
 
       // of(null).pipe(
       //   delay(1000),
