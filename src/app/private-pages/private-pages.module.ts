@@ -1,13 +1,13 @@
-import { DashboardModule } from './dashboard/dashboard.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule, Routes } from '@angular/router';
 import { PrivatePagesComponent } from './private-pages.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: 'private',
+    path: '',
     component: PrivatePagesComponent,
 
     children: [

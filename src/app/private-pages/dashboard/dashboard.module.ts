@@ -5,11 +5,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule,
+
   ]
 })
-export class DashboardModule {
-}
+export class DashboardModule { }

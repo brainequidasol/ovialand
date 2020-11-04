@@ -6,45 +6,53 @@
 				<div class="row justify-content-center">
 					<div class="col-lg-6">
 						<div class="card shadow-lg border-0 rounded-lg mt-5ovia">
-							<div class="card-header" style="text-align: center"><img src="assets/images/logod.png" width="55%"></div>
+							<div class="card-header" style="text-align: center"><img src="assets/images/logod.png"
+									width="55%"></div>
 							<div class="card-body">
 								<h3>Create an Account</h3>
-								<form>
+								<form action="" [formGroup]="createAccountFormGroup">
 									<div class="form-row">
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="small mb-1" for="inputFirstName">First Name</label>
-												<input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" />
+												<input class="form-control py-4" id="inputFirstName" type="text"
+													placeholder="Enter first name" formControlName='firstName' />
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="small mb-1" for="inputLastName">Last Name</label>
-												<input class="form-control py-4" id="inputLastName" type="text" placeholder="Enter last name" />
+												<input formControlName='lastName' class="form-control py-4"
+													id="inputLastName" type="text" placeholder="Enter last name" />
 											</div>
 										</div>
 									</div>
 
 									<div class="form-group">
 										<label class="small mb-1" for="inputEmailAddress">Email</label>
-										<input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" />
+										<input class="form-control py-4" id="inputEmailAddress" type="email"
+											aria-describedby="emailHelp" placeholder="Enter email address"
+											formControlName='userName' />
 									</div>
 									<div class="form-row">
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="small mb-1" for="inputPassword">Password</label>
-												<input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+												<input formControlName='password' class="form-control py-4"
+													id="inputPassword" type="password" placeholder="Enter password" />
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="small mb-1" for="inputConfirmPassword">Confirm Password</label>
-												<input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirm password" />
+												<label class="small mb-1" for="inputConfirmPassword">Confirm
+													Password</label>
+												<input class="form-control py-4" id="inputConfirmPassword"
+													type="password" placeholder="Confirm password" />
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
-										<a class="btn btn-primary btn-block" href="login.html">Create Account</a>
+										<a class="btn btn-primary btn-block" (click)="submitForm()">Create Account</a>
 									</div>
 								</form>
 							</div>
@@ -59,4 +67,3 @@
 	</div>
 	<!-- END CONTENT -->
 </div>
-

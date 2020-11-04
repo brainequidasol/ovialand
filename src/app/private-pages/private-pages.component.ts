@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-private-pages',
+  selector: 'ap-privatep-pages',
   templateUrl: './private-pages.component.html',
   styleUrls: ['./private-pages.component.css']
 })

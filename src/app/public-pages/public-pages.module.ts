@@ -1,3 +1,4 @@
+import { CreateAccountModule } from './create-account/create-account.module';
 import { LoginModule } from './login/login.module';
 import { PublicPagesComponent } from './public-pages.component';
 import { LoginComponent } from './login/login.component';
@@ -34,11 +35,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [PublicPagesComponent, CreateAccountComponent, ResetPasswordComponent, DashboardComponent],
+  declarations: [PublicPagesComponent, ResetPasswordComponent, DashboardComponent],
   imports: [
     LoginModule,
     RouterModule.forChild(routes),
     CommonModule,
+    CreateAccountModule
   ]
 })
 export class PublicPagesModule { }
