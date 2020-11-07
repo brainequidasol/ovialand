@@ -31,7 +31,7 @@
             "scripts": [
                "src/assets/scripts/all.min.js",
                "src/assets/scripts/jquery-3.5.1.min.js",
-               "src/assets/scripts/test.js"
+               "src/assets/scripts/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
