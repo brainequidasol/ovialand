@@ -1,0 +1,100 @@
+.nav-sidebar ul li a span{
+	color: #fff;
+    font-size: 0.8em;
+    background: #D95459;
+    border-radius: 10px;
+    width: 25px;
+    height: 18px;
+    display: inline-block;
+    line-height: 1.7em;
+    text-align: center;
+    float: right;
+}
+.content-box {
+    background-color: #fff;
+    border: 1px solid #ebeff6;
+    border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.content-box ul li{
+   list-style:none;
+}
+.content-box ul li a{
+   font-size:1em;
+   color:#999;
+   padding:0.5em 1em;
+   display: block;
+}
+.content-box ul li span{
+   font-size:1.1em;
+   color:#fff;
+   padding:0.5em 1em;
+   background:#1ABC9C;
+   display: block;
+    border-top-left-radius: 4px;
+   -webkit-border-top-left-radius: 4px;
+   -o-border-top-left-radius: 4px;
+   -ms-border-top-left-radius: 4px;
+	-moz-border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+   -webkit-border-top-right-radius: 4px;
+   -o-border-top-right-radius: 4px;
+   -ms-border-top-right-radius: 4px;
+	-moz-border-top-right-radius: 4px;
+	
+}
+.content-box ul li a i{
+   margin-right:4%;
+}
+.tabs  li a{
+	padding:1em;
+}
+.tabs  li a:hover{
+	background:#1ABC9C !important;
+	color:#fff;
+}
+.tabs  li:first-child a{
+	border-top-left-radius: 4px;
+   -webkit-border-top-left-radius: 4px;
+   -o-border-top-left-radius: 4px;
+   -ms-border-top-left-radius: 4px;
+	-moz-border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+   -webkit-border-top-right-radius: 4px;
+   -o-border-top-right-radius: 4px;
+   -ms-border-top-right-radius: 4px;
+	-moz-border-top-right-radius: 4px;
+}
+.tabs  li:last-child a{
+	border-bottom-left-radius: 4px;
+   -webkit-border-bottom-left-radius: 4px;
+   -o-border-bottom-left-radius: 4px;
+   -ms-border-bottom-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+   -webkit-border-bottom-right-radius: 4px;
+   -o-border-bottom-right-radius: 4px;
+   -ms-border-bottom-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px;
+}
+nav.nav-sidebar {
+    margin: 1em 0;
+	background: #fff;
+	border: 1px solid #ebeff6;
+    border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+
+
+
