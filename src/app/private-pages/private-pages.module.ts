@@ -6,6 +6,11 @@ import { PrivatePagesComponent } from './private-pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PropertyListComponent } from './property-list/property-list.component';
+import { MessagesComponent } from './messages/messages.component';
+import { LeadsComponent } from './leads/leads.component';
+import { ReportsComponent } from './reports/reports.component';
+import { ActivityLogComponent } from './activity-log/activity-log.component';
 
 const routes: Routes = [
   {
@@ -26,7 +31,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [PrivatePagesComponent, UserListComponent],
+  declarations: [PrivatePagesComponent, UserListComponent, PropertyListComponent, MessagesComponent, LeadsComponent, ReportsComponent, ActivityLogComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
