@@ -8,6 +8,8 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     CommonModule,
     MatTableModule
-  ]
+  ],
+  exports: [MatTableModule]
+
 })
 export class UserListModule { }

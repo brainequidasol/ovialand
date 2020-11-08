@@ -1,1 +1,691 @@
-<p>dashboard works!</p>
+<body class="sb-nav-fixed">
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Ovialand</a>
+		<!-- Navbar Search-->
+		<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+			<div class="input-group">
+				<input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+				<div class="input-group-append">
+					<button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+				</div>
+			</div>
+		</form>
+		<!-- Navbar-->
+		<ul class="navbar-nav ml-auto ml-md-0">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+					<a class="dropdown-item" href="#">Settings</a>
+					<a class="dropdown-item" href="#">Activity Log</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="login.html">Logout</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	<div id="layoutSidenav">
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+				<div class="sb-sidenav-menu">
+					<div class="nav">
+						<a class="nav-link" href="index.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+							Dashboard
+						</a>
+
+						<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-users"></i>
+							</div>
+							User Lists
+							<div class="sb-sidenav-collapse-arrow">
+								<i class="fas fa-angle-down"></i>
+							</div>
+						</a>
+
+						<div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="#">All Users</a>
+								<a class="nav-link" href="#">Account Managers</a>
+								<a class="nav-link" href="#">Sales</a>
+								<a class="nav-link" href="#">Engineering</a>
+							</nav>
+						</div>
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+							Property List
+						</a>
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-inbox"></i></div>
+							Messaging
+						</a>
+
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+							Leads
+						</a>
+
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+							Reports
+						</a>
+
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+							Activity Log
+						</a>
+					</div>
+				</div>
+				<div class="sb-sidenav-footer">
+					<div class="small">Logged in as:</div>
+					Administrator
+				</div>
+			</nav>
+		</div>
+		<!-- Content -->
+		<div id="layoutSidenav_content">
+			<main>
+				<div class="container-fluid">
+					<h1 class="mt-4">Dashboard</h1>
+					<ol class=" breadcrumb mb-4">
+						<!-- <li class="ml-auto breadcrumb-item active">Dashboard</li> -->
+						<li class="breadcrumb-item active">Dashboard</li>
+						<!-- 						
+							<li class="breadcrumb-item active">Dashboards</li>
+							<li class="breadcrumb-item active">Dashboards</li> 
+						-->
+					</ol>
+					<div class="row">
+						<div class="col-xl-3 col-md-6">
+							<div class="card bg-primary text-white mb-3 text-center">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-4">
+											<i class="fas fa-home fa-3x"></i>
+										</div>
+										<div class="col-8">
+											<h5 class="card-title">69 Properties</h5>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer d-flex align-items-center justify-content-between">
+									<a class="small text-white stretched-link" href="#">View All Properties</a>
+									<div class="small text-white"><i class="fas fa-angle-right"></i></div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-xl-3 col-md-6">
+							<div class="card bg-primary text-white mb-3 text-center">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-4">
+											<i class="fas fa-users fa-3x"></i>
+										</div>
+										<div class="col-8">
+											<h5 class="card-title">44 Users</h5>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer d-flex align-items-center justify-content-between">
+									<a class="small text-white stretched-link" href="#">View All Users</a>
+									<div class="small text-white"><i class="fas fa-angle-right"></i></div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="col-xl-3 col-md-6">
+							<div class="card bg-primary text-white mb-3 text-center">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-4">
+											<i class="fas fa-file-alt fa-3x"></i>
+										</div>
+										<div class="col-8">
+											<h5 class="card-title">10 Reports</h5>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer d-flex align-items-center justify-content-between">
+									<a class="small text-white stretched-link" href="#">View All Reports</a>
+									<div class="small text-white"><i class="fas fa-angle-right"></i></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-3 col-md-6">
+							<div class="card bg-primary text-white mb-3 text-center">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-4">
+											<i class="fas fa-inbox fa-3x"></i>
+										</div>
+										<div class="col-8">
+											<h5 class="card-title">19 Messages</h5>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer d-flex align-items-center justify-content-between">
+									<a class="small text-white stretched-link" href="#">View All Messages</a>
+									<div class="small text-white"><i class="fas fa-angle-right"></i></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<!-- TABLE START -->
+					<div class="card mb-12">
+						<div class="card-header">
+							<i class="fas fa-table mr-1"></i>
+							Recent Projects
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+									<thead>
+										<tr>
+											<th>Project ID</th>
+											<th>Location</th>
+											<th>Lot Area</th>
+											<th>Acquired By</th>
+											<th>Sales Person</th>
+											<th>Status</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>QC0001</td>
+											<td>Quezon City</td>
+											<td>35 sqm</td>
+											<td>Andres Bonifacio</td>
+											<td>Juana Dela Cruz</td>
+											<td>Active</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-circle btn-circle"><i class="fa fa-file-alt"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-eye"></i> </button>
+											</td>
+										</tr>
+										<tr>
+											<td>QC0002</td>
+											<td>Quezon City</td>
+											<td>235 sqm</td>
+											<td>Jose Rizal</td>
+											<td>Juana Dela Cruz</td>
+											<td>Active</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-circle btn-circle"><i class="fa fa-file-alt"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-eye"></i> </button>
+											</td>
+										</tr>
+										<tr>
+											<td>QC0003</td>
+											<td>Batangas</td>
+											<td>65 sqm</td>
+											<td>Maria Clara</td>
+											<td>Juan Dela Cruz</td>
+											<td>Inactive</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-circle btn-circle tooltips"><i class="fa fa-file-alt"></i><span class="tooltiptext">View Document</span> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-eye"></i> </button>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+					<!-- TABLE END -->
+				</div>
+			</main>
+			
+
+			<br><br>
+
+			<!-- PROFILE -->
+			<section class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-4">
+							<!-- Profile Image -->
+							<div class="card card-primary card-outline">
+								<div class="card-body box-profile">
+									<div class="text-center">
+										<img class="profile-user-img img-fluid img-circle"
+										src="https://via.placeholder.com/150"
+										alt="User profile picture">
+									</div>
+									<h3 class="profile-username text-center">Jose Rizal</h3>
+									<p class="text-muted text-center">Engineer</p>
+									<ul class="list-group list-group-unbordered mb-3">
+										<li class="list-group-item">
+											<b>Project Completed</b> <a class="float-right">122</a>
+										</li>
+										<li class="list-group-item">
+											<b>Project On-going</b> <a class="float-right">44</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-md-8">
+							<div class="card">
+								<div class="card-header p-2">
+									<ul class="nav nav-pills">
+										<li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Project List Assigned</a></li>
+										<li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Profile Settings</a></li>
+									</ul>
+								</div>
+								<div class="card-body">
+									<div class="tab-content">
+										<div class="active tab-pane" id="activity">
+											<div class="table-responsive">
+												<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+													<thead>
+														<tr>
+															<th>Project ID</th>
+															<th>Location</th>
+															<th>Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>QC0001</td>
+															<td>Quezon City</td>
+															<td>
+																<div class="tooltip-div">
+																	<button title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" type="button" data-original-title="View Documents"><i class="fas fa-file-alt"></i></button>
+																	<button title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" type="button" data-original-title="View Detailed Project"><i class="fas fa-home"></i></button>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>QC0002</td>
+															<td>Quezon City</td>
+															<td>
+																<div class="tooltip-div">
+																	<button title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" type="button" data-original-title="View Documents"><i class="fas fa-file-alt"></i></button>
+																	<button title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" type="button" data-original-title="View Detailed Project"><i class="fas fa-home"></i></button>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>QC0003</td>
+															<td>Batangas</td>
+															<td>
+																<div class="tooltip-div">
+																	<button title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" type="button" data-original-title="View Documents"><i class="fas fa-file-alt"></i></button>
+																	<button title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" type="button" data-original-title="View Detailed Project"><i class="fas fa-home"></i></button>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- /.tab-pane -->
+										<div class="tab-pane" id="settings">
+											<form class="form-horizontal">
+												<div class="form-group row">
+													<label for="inputName" class="col-sm-2 col-form-label">Name</label>
+													<div class="col-sm-10">
+														<input type="email" class="form-control" id="inputName" placeholder="Enter Name">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+													<div class="col-sm-10">
+														<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="inputName2" class="col-sm-2 col-form-label">Address</label>
+													<div class="col-sm-10">
+														<textarea class="form-control" id="inputAddress" placeholder="Address"></textarea>
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="inputSkills" class="col-sm-2 col-form-label">Birthday</label>
+													<div class="col-sm-10">
+														<input type="text" class="form-control" id="inputSkills" placeholder="Birthday">
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="offset-sm-2 col-sm-10">
+														<button type="submit" class="btn btn-primary">Submit</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+			<br><br>
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<a href="#" class="btn btn-primary btn-block mb-3">Compose Message</a>
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Folders</h4>
+							</div>
+							<div class="card-body p-0">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item active">
+										<a href="#" class="nav-link">
+											<i class="fas fa-inbox"></i> Inbox
+											<span class="badge bg-warning float-right">12</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="far fa-envelope"></i> Sent
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="far fa-file-alt"></i> Drafts
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="fas fa-filter"></i> Junk
+											<span class="badge bg-warning float-right">65</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="far fa-trash-alt"></i> Trash
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /.card-body -->
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-md-8">
+						<div class="card card-primary card-outline">
+							<div class="card-header">
+								<h3 class="card-title">Inbox</h3>
+								<div class="card-tools">
+									<div class="input-group input-group-sm">
+										<input type="text" class="form-control" placeholder="Search Mail">
+										<div class="input-group-append">
+											<div class="btn btn-primary">
+												<i class="fas fa-search"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /.card-tools -->
+							</div>
+							<!-- /.card-header -->
+							<div class="card-body p-0">
+								<div class="mailbox-controls">
+									<!-- Check all button -->
+									<button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+									</button>
+									<div class="btn-group">
+										<button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+										<button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+										<button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+									</div>
+									<!-- /.btn-group -->
+									<button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+									<div class="float-right">
+										1-50/200
+										<div class="btn-group">
+											<button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
+											<button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
+										</div>
+										<!-- /.btn-group -->
+									</div>
+									<!-- /.float-right -->
+								</div>
+								<div class="table-responsive mailbox-messages">
+									<table class="table table-hover table-striped">
+										<tbody>
+											<tr>
+												<td>
+													<div class="icheck-primary">
+														<input type="checkbox" value="" id="check1">
+														<label for="check1"></label>
+													</div>
+												</td>
+												<td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
+												<td class="mailbox-name"><a href="read-mail.html">Apolinario Mabini</a></td>
+												<td class="mailbox-subject">Something message here
+												</td>
+												<td class="mailbox-attachment"></td>
+												<td class="mailbox-date">5 mins ago</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="icheck-primary">
+														<input type="checkbox" value="" id="check2">
+														<label for="check2"></label>
+													</div>
+												</td>
+												<td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
+												<td class="mailbox-name"><a href="read-mail.html">Apolinario Mabini</a></td>
+												<td class="mailbox-subject">Something message here
+												</td>
+												<td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+												<td class="mailbox-date">28 mins ago</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="icheck-primary">
+														<input type="checkbox" value="" id="check3">
+														<label for="check3"></label>
+													</div>
+												</td>
+												<td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
+												<td class="mailbox-name"><a href="read-mail.html">Apolinario Mabini</a></td>
+												<td class="mailbox-subject">Something message here
+												</td>
+												<td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+												<td class="mailbox-date">11 hours ago</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- /.table -->
+								</div>
+								<!-- /.mail-box-messages -->
+							</div>
+							<!-- /.card-body -->
+							<div class="card-footer p-0">
+								<div class="mailbox-controls">
+									<!-- Check all button -->
+									<button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+									</button>
+									<div class="btn-group">
+										<button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+										<button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+										<button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+									</div>
+									<!-- /.btn-group -->
+									<button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+									<div class="float-right">
+										1-50/200
+										<div class="btn-group">
+											<button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
+											<button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
+										</div>
+										<!-- /.btn-group -->
+									</div>
+									<!-- /.float-right -->
+								</div>
+							</div>
+						</div>
+						<!-- /.card -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title text-uppercase mb-0">Manage Users</h5><br>
+								<a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Create User</a>
+							</div>
+							<div class="table-responsive">
+								<table class="table no-wrap user-table mb-0">
+									<thead>
+										<tr>
+											<th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+											<th scope="col" class="border-0 text-uppercase font-medium">Name</th>
+											<th scope="col" class="border-0 text-uppercase font-medium">Occupation</th>
+											<th scope="col" class="border-0 text-uppercase font-medium">Email</th>
+											<th scope="col" class="border-0 text-uppercase font-medium">Date Added</th>
+											<th scope="col" class="border-0 text-uppercase font-medium">Manage</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="pl-4">1</td>
+											<td>
+												<h5 class="font-medium mb-0">Jose Rizal</h5>
+												<span class="text-muted">Binan, Laguna</span>
+											</td>
+											<td>
+												<span class="text-muted">Engineer</span>
+											</td>
+											<td>
+												<span class="text-muted">jrizal@ovialand.com</span>
+											</td>
+											<td>
+												<span class="text-muted">17 Aug 1988</span>
+											</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-circle btn-circle"><i class="fa fa-key"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-eye"></i> </button>
+											</td>
+										</tr>
+										<tr>
+											<td class="pl-4">2</td>
+											<td>
+												<h5 class="font-medium mb-0">Marcelo H. Del Pilar</h5>
+												<span class="text-muted">Bulacan</span>
+											</td>
+											<td>
+												<span class="text-muted">Engineer</span>
+											</td>
+											<td>
+												<span class="text-muted">mdelpilar@ovialand.com</span>
+											</td>
+											<td>
+												<span class="text-muted">17 Feb 1988</span>
+											</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-circle btn-circle"><i class="fa fa-key"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-eye"></i> </button>
+											</td>
+										</tr>
+										<tr>
+											<td class="pl-4">3</td>
+											<td>
+												<h5 class="font-medium mb-0">Apolinario Mabini</h5>
+												<span class="text-muted">Tondo, Manila</span>
+											</td>
+											<td>
+												<span class="text-muted">Engineer</span>
+											</td>
+											<td>
+												<span class="text-muted">amabini@ovialand.com</span>
+											</td>
+											<td>
+												<span class="text-muted">1 Jan 1988</span>
+											</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-circle btn-circle"><i class="fa fa-key"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-eye"></i> </button>
+											</td>
+										</tr>
+										<tr>
+											<td class="pl-4">4</td>
+											<td>
+												<h5 class="font-medium mb-0">Andres Bonifacio</h5>
+												<span class="text-muted">Caloocan</span>
+											</td>
+											<td>
+												<span class="text-muted">Engineer</span>
+											</td>
+											<td>
+												<span class="text-muted">abonifacio@ovialand.com</span>
+											</td>
+											<td>
+												<span class="text-muted">15 Aug 1988</span>
+											</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-circle btn-circle"><i class="fa fa-key"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+												<button type="button" class="btn btn-primary btn-circle btn-circle ml-2"><i class="fa fa-eye"></i> </button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><br>
+
+
+
+
+
+			<footer class="py-4 bg-light mt-auto">
+				<div class="container-fluid">
+					<div class="d-flex align-items-center justify-content-between small">
+						<div class="text-muted">Copyright &copy; Ovialand 2020</div>
+						<div>
+							<a href="#">Privacy Policy</a>
+							&middot;
+							<a href="#">Terms &amp; Conditions</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+
+<h2>Say something here</h2>
+
+
+
+
+
+		</div>
+	</div>
+</body>
