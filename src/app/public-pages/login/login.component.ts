@@ -1,3 +1,4 @@
+import { Router, RouterModule, Routes } from '@angular/router';
 import { HtmlAstPath } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   loginFormGroup: FormGroup;
   sampleSubmit: Observable<any>;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.loginFormGroup = this.fb.group({
@@ -33,18 +34,25 @@ export class LoginComponent implements OnInit {
         userName: this.loginFormGroup.get('userName').value,
         password: this.loginFormGroup.get('password').value
       };
-      this.http.post('http://localhost:3000/api/posts', x).subscribe((response) => {
-        console.log(response);
-        if (response == false) {
-          // alert("wrong account");
+      console.log(x);
+      if (x.userName == 'admin@admin' && x.password == 'admin') {
+        // console.log("login");
+        this.router.navigate(["/private/dashboard"]);
+      } else {
+        // console.log("login error");
+        alert("Your email address or password is not valid");
+      }
+    }
 
-        }
+    // this.http.post('http://localhost:3000/api/posts', x).subscribe((response) => {
+    //   console.log(response);
+    //   if (response == false) {
+    //     // alert("wrong account");
 
-      })
+    //   }
+    // })
 
-
-
-    } else {
+    else {
       console.log(this.loginFormGroup.errors);
 
     }
