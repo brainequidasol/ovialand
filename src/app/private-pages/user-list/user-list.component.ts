@@ -17,6 +17,7 @@ export interface PeriodicElement {
   lastname: string;
 
 };
+
 const ELEMENT_DATA: PeriodicElement[] = [
   { username: 'one', firstname: 'Hydrogen', lastname: 'wan', },
   { username: 'two', firstname: 'Helium', lastname: 'too', },
@@ -36,20 +37,22 @@ export class UserListComponent implements OnInit {
   constructor(private http: HttpClient) { };
 
   ngOnInit(): void {
-    // this.http.get("http://localhost:3000/api/getuserlist").subscribe((response) => {
-    //   // console.log(response);
+    this.http.get("http://localhost:3000/api/getuserlist").subscribe((response) => {
+      // console.log(response);
+      // let data = response;
 
-    //   export interface PeriodicElement {
-    //     username: string;
-    //     firstname: string;
-    //     lastname: string;
 
-    //   };
-    //   const ELEMENT_DATA: PeriodicElement[] = [
-    //     { username: 'one', firstname: 'Hydrogen', lastname: 'wan', },
-    //     { username: 'two', firstname: 'Helium', lastname: 'too', },
-    //   ];
-    // });
+      //   export interface PeriodicElement {
+      //     username: string;
+      //     firstname: string;
+      //     lastname: string;
+
+      //   };
+      //   const ELEMENT_DATA: PeriodicElement[] = [
+      //     { username: 'one', firstname: 'Hydrogen', lastname: 'wan', },
+      //     { username: 'two', firstname: 'Helium', lastname: 'too', },
+      //   ];
+    });
   }
 
   displayedColumns: string[] = ['username', 'firstname', 'lastname'];

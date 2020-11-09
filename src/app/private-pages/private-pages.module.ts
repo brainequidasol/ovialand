@@ -56,7 +56,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     DashboardModule,
-    UserListModule
+    UserListModule,
   ]
 })
 export class PrivatePagesModule { }
