@@ -1,0 +1,114 @@
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Ovialand</a>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
+                    aria-describedby="basic-addon2" />
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Activity Log</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" routerLink="/private/sales-page">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Create Leads
+                        </a>
+                        <a class="nav-link" routerLink="/private/sales-page-leads">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            View Leads
+                        </a>
+
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+
+                </div>
+            </nav>
+        </div>
+        <!-- Content -->
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">View Leads</h1>
+                    <ol class=" breadcrumb mb-4">
+                        <!-- <li class="ml-auto breadcrumb-item active">Dashboard</li> -->
+                        <!-- 						
+							<li class="breadcrumb-item active">Dashboards</li>
+							<li class="breadcrumb-item active">Dashboards</li> 
+						-->
+                    </ol>
+
+
+
+                    <!-- TABLE START -->
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+                        <ng-container matColumnDef="firstName">
+                            <th mat-header-cell *matHeaderCellDef> First Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="lastName">
+                            <th mat-header-cell *matHeaderCellDef> Last Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="address">
+                            <th mat-header-cell *matHeaderCellDef> Address</th>
+                            <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="email">
+                            <th mat-header-cell *matHeaderCellDef> Email Address </th>
+                            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="gender">
+                            <th mat-header-cell *matHeaderCellDef> Gender </th>
+                            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="unit1">
+                            <th mat-header-cell *matHeaderCellDef> Unit1 </th>
+                            <td mat-cell *matCellDef="let element"> {{element.unit1}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="unit2">
+                            <th mat-header-cell *matHeaderCellDef> Unit2 </th>
+                            <td mat-cell *matCellDef="let element"> {{element.unit2}} </td>
+                        </ng-container>
+
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+                    </table>
+                    <!-- TABLE END -->
+                </div>
+            </main>
+        </div>
+    </div>
+</body>

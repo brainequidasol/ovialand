@@ -21,12 +21,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginFormGroup = this.fb.group({
-      userName: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      userName: ['e@e.com', [Validators.required, Validators.email]],
+      password: ['q', [Validators.required]],
     });
   }
 
   submitForm() {
+
     if (this.loginFormGroup.valid) {
 
       // console.log("loggin in")
@@ -35,23 +36,15 @@ export class LoginComponent implements OnInit {
         password: this.loginFormGroup.get('password').value
       };
       console.log(x);
-      if (x.userName == 'admin@admin' && x.password == 'admin') {
-        // console.log("login");
-        this.router.navigate(["/private/dashboard"]);
-      } else {
-        // console.log("login error");
-        alert("Your email address or password is not valid");
-      }
+      this.http.post('http://localhost:3000/api/login', x).subscribe((response) => {
+        console.log(response);
+
+        if (response == false) {
+          // alert("wrong account");
+        }
+
+      })
     }
-
-    // this.http.post('http://localhost:3000/api/posts', x).subscribe((response) => {
-    //   console.log(response);
-    //   if (response == false) {
-    //     // alert("wrong account");
-
-    //   }
-    // })
-
     else {
       console.log(this.loginFormGroup.errors);
 

@@ -1,3 +1,4 @@
+import { RouterModule, Router } from '@angular/router';
 import { HtmlAstPath } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,7 +16,7 @@ export class CreateAccountComponent implements OnInit {
   createAccountFormGroup: FormGroup
   sampleSubmit: Observable<any>;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -38,6 +39,9 @@ export class CreateAccountComponent implements OnInit {
       };
       this.http.post('http://localhost:3000/api/createaccont', x).subscribe((response) => {
         // console.log(response);
+        if (response = true) {
+          this.router.navigate(["/private/client-page"]);
+        }
       })
       console.log(x);
 

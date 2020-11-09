@@ -6,25 +6,19 @@ import { delay, tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 
 
-
-
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  selector: 'app-sales-page-leads',
+  templateUrl: './sales-page-leads.component.html',
+  styleUrls: ['./sales-page-leads.component.css']
 })
-
-
-
-
-export class UserListComponent implements OnInit {
+export class SalesPageLeadsComponent implements OnInit {
 
   dataSource: any;
-  displayedColumns: string[] = ['userName', 'firstName', 'lastName', 'role', 'dateCreated'];
+  displayedColumns: string[] = ['firstName', 'lastName', 'address', 'email', 'gender', 'unit1', 'unit2'];
 
   constructor(private http: HttpClient) { };
   ngOnInit(): void {
-    this.http.get("http://localhost:3000/api/getuserlist").subscribe((response) => {
+    this.http.get("http://localhost:3000/api/getsalesleads").subscribe((response) => {
       this.dataSource = response;
 
 
@@ -32,10 +26,4 @@ export class UserListComponent implements OnInit {
 
   }
 
-
-
-
-
 }
-
-
