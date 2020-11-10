@@ -1,3 +1,4 @@
+import { PropertyListModule } from './property-list/property-list.module';
 import { SalesPageLeadsModule } from './sales-page-leads/sales-page-leads.module';
 import { SalesPageModule } from './sales-page/sales-page.module';
 import { UserListModule } from './user-list/user-list.module';
@@ -80,7 +81,8 @@ const routes: Routes = [
     DashboardModule,
     UserListModule,
     SalesPageModule,
-    SalesPageLeadsModule
+    SalesPageLeadsModule,
+    PropertyListModule
   ]
 })
 export class PrivatePagesModule { }

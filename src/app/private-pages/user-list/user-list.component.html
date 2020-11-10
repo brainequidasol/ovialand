@@ -30,7 +30,7 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link" routerLinkDashboard>
+                        <a class="nav-link" routerLink="/private/dashboard">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
@@ -86,59 +86,81 @@
                 </div>
             </nav>
         </div>
-        <!-- Content -->
         <div id="layoutSidenav_content">
+            <!--START CONTENT-->
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4">User Lists</h1>
+                    <h1 class="mt-4">User Lists Page</h1>
                     <ol class=" breadcrumb mb-4">
                         <!-- <li class="ml-auto breadcrumb-item active">Dashboard</li> -->
-                        <li class="breadcrumb-item active">User Lists</li>
-                        <!-- 						
-							<li class="breadcrumb-item active">Dashboards</li>
-							<li class="breadcrumb-item active">Dashboards</li> 
-						-->
+                        <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">User Lists</a></li>
+                        <li class="breadcrumb-item">All</li>
                     </ol>
-
-
-
+                        <a class="btn btn-primary"><i class="fa fa-plus"></i> Create User</a>
+                    <pre></pre>  
+                    <!-- BODY CONTENT-->
                     <!-- TABLE START -->
-                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <div>
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                            <ng-container matColumnDef="userName">
+                                <th mat-header-cell *matHeaderCellDef> User Name </th>
+                                <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="id">
+                                <th mat-header-cell *matHeaderCellDef> ID </th>
+                                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="firstName">
+                                <th mat-header-cell *matHeaderCellDef> First Name </th>
+                                <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="lastName">
+                                <th mat-header-cell *matHeaderCellDef> Last Name </th>
+                                <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="role">
+                                <th mat-header-cell *matHeaderCellDef> Role</th>
+                                <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+                            </ng-container>
 
-                        <ng-container matColumnDef="userName">
-                            <th mat-header-cell *matHeaderCellDef> User Name </th>
-                            <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
-                        </ng-container>
-
-                        <ng-container matColumnDef="firstName">
-                            <th mat-header-cell *matHeaderCellDef> First tName </th>
-                            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
-                        </ng-container>
-
-                        <ng-container matColumnDef="lastName">
-                            <th mat-header-cell *matHeaderCellDef> Last Name </th>
-                            <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
-                        </ng-container>
-
-                        <ng-container matColumnDef="role">
-                            <th mat-header-cell *matHeaderCellDef> Role</th>
-                            <td mat-cell *matCellDef="let element"> {{element.role}} </td>
-                        </ng-container>
-
-                        <ng-container matColumnDef="dateCreated">
-                            <th mat-header-cell *matHeaderCellDef> Date Created </th>
-                            <td mat-cell *matCellDef="let element"> {{element.dateCreated}} </td>
-                        </ng-container>
-
-
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-
-                    </table>
-                    <!-- TABLE END -->
+                            <ng-container matColumnDef="dateCreated">
+                                <th mat-header-cell *matHeaderCellDef> Date Created </th>
+                                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="Actions">
+                                <th mat-header-cell *matHeaderCellDef> Actions</th>
+                                <td mat-cell *matCellDef="let element">
+                                    <button type="button" class="btn btn-primary btn-circle btn-circle tooltips">
+                                        <i class="fa fa-eye"></i><span class="tooltiptext">View Profile</span>
+                                    </button>
+                                    &nbsp;
+                                    <button type="button" class="btn btn-primary btn-circle btn-circle tooltips">
+                                        <i class="fa fa-edit"></i> <span class="tooltiptext">Edit Profile</span>
+                                    </button>
+                                </td>
+                            </ng-container>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                    <br>
                 </div>
             </main>
+            <!--END CONTENT-->
+
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Ovialand 2020</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </body>

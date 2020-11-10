@@ -20,7 +20,7 @@ import { Injectable } from '@angular/core';
 export class UserListComponent implements OnInit {
 
   dataSource: any;
-  displayedColumns: string[] = ['userName', 'firstName', 'lastName', 'role', 'dateCreated'];
+  displayedColumns: string[] = ['id', 'userName', 'firstName', 'lastName', 'role', 'dateCreated', 'Actions'];
 
   constructor(private http: HttpClient) { };
   ngOnInit(): void {

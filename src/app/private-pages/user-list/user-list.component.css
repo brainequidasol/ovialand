@@ -2,6 +2,23 @@ table {
     width: 100%;
   }
 td{
-  background-color:#fff;
+  background-color: #fff;
   color:black;
+  padding: 0.75rem;
+  vertical-align: top;
+  border-bottom-color: rgba(0,0,0,.12);
+ 
+}
+
+th{
+  background-color: #177922;
+  color: #fff;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
+    padding: 25px;
+}
+
+.mat-table{
+    background-color: #fff;
 }

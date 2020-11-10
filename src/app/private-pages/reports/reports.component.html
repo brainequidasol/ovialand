@@ -1,1 +1,119 @@
-<p>reports works!</p>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Ovialand</a>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
+                    aria-describedby="basic-addon2" />
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Activity Log</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" routerLink="/private/dashboard">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            User Lists
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" routerLink="/private/userlist">All Users</a>
+                                <a class="nav-link" href="#">Account Managers</a>
+                                <a class="nav-link" href="#">Sales</a>
+                                <a class="nav-link" href="#">Engineering</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link" routerLink="/private/property-list">
+                            <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                            Property List
+                        </a>
+                        <a class="nav-link" routerLink="/private/messages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-inbox"></i></div>
+                            Messaging
+                        </a>
+
+                        <a class="nav-link" routerLink="/private/leads">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Leads
+                        </a>
+
+                        <a class="nav-link" routerLink="/private/reports">
+                            <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                            Reports
+                        </a>
+
+                        <a class="nav-link" routerLink="/private/activity-log">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                            Activity Log
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Administrator
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <!--START CONTENT-->
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Reports Page</h1>
+                    <ol class=" breadcrumb mb-4">
+                        <!-- <li class="ml-auto breadcrumb-item active">Dashboard</li> -->
+                        <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item">Reports</li>
+                    </ol> 
+                    <!-- BODY CONTENT-->
+                    
+                </div>
+            </main>
+            <!--END CONTENT-->
+
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Ovialand 2020</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
